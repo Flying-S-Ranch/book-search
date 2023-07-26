@@ -10,7 +10,7 @@ const typeDefs = `
 
   type Book {
     bookId: String
-    authors: [Author]
+    authors: [Auth]
     description: String
     title: String
     image: String
@@ -37,7 +37,7 @@ const typeDefs = `
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     saveBook(bookId: String
-      authors: [Author]
+      authors: [Auth]
       description: String
       title: String
       image: String
