@@ -1,10 +1,10 @@
-const { User, Thought } = require('../models');
+const { User, Book } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     users: async () => {
-      return User.find().populate('thoughts');
+      return User.find().populate('books');
     },
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate('thoughts');
