@@ -5,6 +5,8 @@
 ## Usage
 
 ## Credits
+This project is built on source code provided by EdX. 
+The schema directory is adapted from module 21 activity 26.
 
 ## License
 The MIT License (MIT)
