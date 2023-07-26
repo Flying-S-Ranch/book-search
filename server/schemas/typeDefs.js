@@ -8,12 +8,13 @@ const typeDefs = `
     savedBooks: [Book]!
   }
 
-  type Thought {
-    _id: ID
-    thoughtText: String
-    thoughtAuthor: String
-    createdAt: String
-    comments: [Comment]!
+  type Book {
+    bookId: String
+    authors: [Author]
+    description: String
+    title: String
+    image: String
+    link: String
   }
 
   type Comment {
