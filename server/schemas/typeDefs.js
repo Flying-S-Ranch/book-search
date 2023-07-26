@@ -1,10 +1,11 @@
+// This file is adapted from module 21 activity 26
 const typeDefs = `
   type User {
     _id: ID
     username: String
     email: String
-    password: String
-    thoughts: [Thought]!
+    bookCount: Int
+    savedBooks: [Book]!
   }
 
   type Thought {
