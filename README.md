@@ -1,12 +1,14 @@
 # Book Search Engine
 
 ## Description
+This project allows users to search for books and save books that they would like to read. This challenge enabled me to practice refactoring a full-stack app from a REST-ful API to a React setup. I particularly enjoyed the satisfaction of getting the GraphQL hooked up successfully.
 
 ## Usage
+This project is not yet functional, but when everything is finished users will be able to search for, save, and remove books from their own reading lists. The book search is connected to an API so the catalogue of reading material is extensive!
 
 ## Credits
-This project is built on source code provided by EdX. 
-The schema directory is adapted from module 21 activity 26.
+This project is built on source code provided by EdX, and the module 21 activities were very helpful as I sought to correctly configure the files.
+The schema directory and files in the utils folder are adapted from module 21 activity 26.
 
 ## License
 The MIT License (MIT)
