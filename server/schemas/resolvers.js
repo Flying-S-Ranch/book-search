@@ -1,10 +1,13 @@
+// This file is adapted from module 21 activity 26
 const { User, Book } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    users: async () => {
-      return User.find();
+    user: async (parent, { user }) => {
+      return User.findOne({
+        $or: [{ _id: user ? user._id : params.id }, { username: params.username }],
+      });
     },
   },
 
