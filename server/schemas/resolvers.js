@@ -1,5 +1,5 @@
 // This file is adapted from module 21 activity 26
-const { User, Book } = require('../models');
+const { User } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -18,7 +18,7 @@ const resolvers = {
       return { token, user };
     },
     login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+      const user = await User.findOne({ $or: [{ username: body.username }, { email: body.email }] });
 
       if (!user) {
         throw AuthenticationError;
@@ -34,6 +34,18 @@ const resolvers = {
 
       return { token, user };
     },
+    saveBook: async (parent, { user, book }) => {
+      return User.findOneAndUpdate(
+        { _id: user },
+        {
+          $addToSet: { books: book },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      )
+    }
   },
 };
 
